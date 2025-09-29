@@ -274,7 +274,7 @@ print("El área de la circunferencia es:", round(area, 5))
 
 entrada = input("Introduce la temperatura: ")
 
-valor = float(entrada[:-1])   # Todo menos la última letra
+valor = float(entrada[:-1])
 unidad = entrada[-1].upper()  # Última letra, convertida en mayúscula
 
 if unidad == "C":
@@ -295,7 +295,7 @@ elif unidad == "K":
 else:
     print("Unidad no válida. Usa C, F o K.")
 
-"""
+
 #Ejercicio18
 
 sueldo = float(input("Introduce tu sueldo anual en euros: "))
@@ -321,6 +321,7 @@ print("El porcentaje de retención es:", porcentaje, "%")
 print("El importe de la retención es:", round(retencion, 2), "€")
 print("El sueldo neto que cobrarás es:", round(neto, 2), "€")
 
+"""
 
 
 
