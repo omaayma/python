@@ -167,7 +167,7 @@ if len(matricula) == 7:
 else:
     print("Longitud incorrecta")
 
-"""
+
 #Ejercicio13
 matricula = input("Introduce matrícula: ")
 letrasValidas = "BCDFGHJKLMNPRSTVWXYZ"
@@ -195,3 +195,61 @@ if len(matricula) == 7:
 else:
     print("Longitud incorrecta")
 
+
+#Ejercicio14
+letras = "TRWAGMYFPDXBNJZSQVHLCKE"
+nif = input("Introduce tu nif:")
+num = nif[:-1] #para obtener todos los elementos menos el último
+letra = nif[-1] #para obtener el último
+
+if num.isdigit() and len(num) == 8:
+    resto = int(num) % 23
+    letraNif = letras[resto]
+    if letra == letraNif:
+        print("NIF correcto")
+    else:
+        print("NIF incorrecto. La letra del Nif debe ser ", letraNif)
+else:
+    print("Inválido")
+
+
+#Ejercicio15
+
+fecha = input("Introduce una fecha:")
+
+if len(fecha) == 10 and fecha[2] == '/' and fecha[5] == '/':
+    dia = fecha[:2]
+    mes = fecha[3:5]
+    anyo = fecha[6:]
+
+    if dia.isdigit() and mes.isdigit() and anyo.isdigit():
+        dia = int(dia)
+        mes = int(mes)
+        anio = int(anyo)
+
+        bisiesto = (anio % 4 == 0 and anio % 100 != 0) or (anio % 400 == 0)
+
+        dias_por_mes = [31, 29 if bisiesto else 28, 31, 30, 31, 30,
+                        31, 31, 30, 31, 30, 31]
+
+        if 1 <= mes <= 12 and 1 <= dia <= dias_por_mes[mes - 1]:
+            print("La fecha es válida")
+        else:
+            print("No válido")
+    else:
+        print("Inválido")
+else:
+    print("Formato incorrecto")
+
+
+"""
+#Ejercicio15Otraforma
+from datetime import datetime
+
+fecha = input("Introduce una fecha:")
+try:
+    datetime.strptime(fecha, "%d/%m/%Y") #para nconvertir la cadena en una fecha
+    print("Correcto")
+except ValueError:
+    print("Incorrecto")
+    
