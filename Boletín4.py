@@ -33,8 +33,9 @@ while a <= numMax:
 
 #Ejercicio4
 num = int(input("Introduce un número: "))
-numCifras = len(str(abs(num)))
+numCifras = len(str(num))
 print("El número", num, " tiene", numCifras, "cifras.")
+
 
 #Ejercicio5
 num = input("Introduce un número: ")
@@ -150,16 +151,19 @@ for c in cadena:
 
 print("Cifras encontradas:", cifras)
 
+"""
 
 #Ejercicio11
 frase = input("Introduce una frase: ")
 resultado = ""
 
 for c in frase:
-    if c == " ":
-        resultado = resultado + " "
+    if c != " ":
+        resultado += c + "-"
     else:
-        resultado = resultado + c + "-"
+        if resultado.endswith("-"):
+            resultado = resultado[:-1]
+        resultado += " "
 
 if resultado.endswith("-"):
     resultado = resultado[:-1]
@@ -167,6 +171,7 @@ if resultado.endswith("-"):
 print(resultado)
 
 
+"""
 #Ejercicio12
 anio = int(input("Introduce un año: "))
 
@@ -182,7 +187,7 @@ c = input("Introduce un carácter: ")
 
 for i in range(n):
     print(c * n)
-    """
+
 
 #Ejercicio14
 hora = input("Introduce una hora: ")
@@ -212,9 +217,7 @@ else:
     else:
         print("Incorrecto.")
 
-
-
-
+"""
 
 
 
