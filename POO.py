@@ -65,6 +65,7 @@ print(mascota3.cuantosPerros())
 print(mascota1.cuantosPerros())
 print(mascota1.ladrar())
 
+#POO
 
 
 

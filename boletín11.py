@@ -1,4 +1,6 @@
-#ejercicio1 
+#boletín 11
+
+#ejercicio1
 class Pokemon:
 
     tipos = [
