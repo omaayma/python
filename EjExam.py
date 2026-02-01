@@ -613,5 +613,3 @@ def palabras_transformacion():
 # analisis_texto()
 # validar_correo()
 # palabras_transformacion()
-
-

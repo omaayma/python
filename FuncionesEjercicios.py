@@ -186,3 +186,31 @@ print(f"La cadena invertida es: {cadena_invertida}")
 
 
 
+
+
+def precio_con_iva(precio, iva):
+    # Calcular el precio final
+    precio_final = precio + (precio * iva / 100)
+    return precio_final
+
+
+# Programa principal
+try:
+    # Pedir datos al usuario
+    precio = float(input("Introduce el precio sin IVA: "))
+    iva = float(input("Introduce el porcentaje de IVA: "))
+
+    # Validar que los valores sean positivos
+    if precio < 0 or iva < 0:
+        raise ValueError("El precio y el IVA deben ser positivos")
+
+    # Llamar a la función
+    total = precio_con_iva(precio, iva)
+
+    # Mostrar resultado con formato
+    print("Precio sin IVA:  {:.2f} €".format(precio))
+    print("IVA aplicado:    {} %".format(int(iva)))
+    print("Precio con IVA:  {:.2f} €".format(total))
+
+except ValueError as e:
+    print("Error:", e)
